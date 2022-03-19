@@ -25,10 +25,30 @@ export const MovieCoverContainer = styled.div`
   align-items: center;
   justify-content: center;
   img {
-      width: 200px;
+    width: 200px;
     -o-object-fit: cover;
     object-fit: cover;
     background-color: var(--medium);
     border-radius: 10px;
   }
+`;
+
+// @ts-ignore
+export const MovieTag = styled.span`
+  border-radius: 2px;
+  height: auto;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: 0.3125rem 0.625rem;
+  background-color: #eaeaea;
+  color: #000;
+  letter-spacing: 0.17px;
+  margin: 5px;
+`;
+
+// @ts-ignore
+export const MovieTagsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;

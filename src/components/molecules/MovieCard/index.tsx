@@ -4,6 +4,8 @@ import {
   MovieCardContainer,
   MovieCover,
   MovieCoverContainer,
+  MovieTag,
+  MovieTagsContainer,
   // @ts-ignore
 } from "./styles.ts";
 
@@ -27,12 +29,12 @@ const MovieCard = ({
       </MovieCoverContainer>
       <h1>{name}</h1>
       <span>Genero: {genre} </span>
-      <div>
+      <MovieTagsContainer>
         {tags &&
           tags.map((tag) => {
-            return <span>{tag}</span>;
+            return <MovieTag>{tag}</MovieTag>;
           })}
-      </div>
+      </MovieTagsContainer>
     </MovieCardContainer>
   );
 };
