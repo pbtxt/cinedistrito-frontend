@@ -1,6 +1,6 @@
 import * as React from "react";
 // @ts-ignore
-import { ListingMoviesWrapper } from "./styles.ts";
+import { ListingMoviesWrapper, SectionName } from "./styles.ts";
 // @ts-ignore
 import Movie from "../../molecules/MovieCard/index.tsx";
 // @ts-ignore
@@ -25,6 +25,7 @@ const ListingComponent = ({}): JSX.Element => {
   return (
     <div>
       <Header items={items} />
+      <SectionName>En Cartelera</SectionName>
       <ListingMoviesWrapper>
         {movies &&
           movies.map((movie, index) => {
