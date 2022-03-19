@@ -1,3 +1,6 @@
 import styled from "styled-components";
-
-export const ListingMoviesWrapper = styled.div``;
+// @ts-ignore
+export const ListingMoviesWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
