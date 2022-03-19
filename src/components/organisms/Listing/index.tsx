@@ -3,12 +3,28 @@ import * as React from "react";
 import { ListingMoviesWrapper } from "./styles.ts";
 // @ts-ignore
 import Movie from "../../molecules/MovieCard/index.tsx";
+// @ts-ignore
+import Header from "../../molecules/Header/index.tsx";
 import { movies } from "../../molecules/MovieCard/mockdata";
 
+const items = [
+  {
+    name: "Cartelera",
+    url: "/cartelera",
+  },
+  {
+    name: "Próximamente",
+    url: "/pronto",
+  },
+  {
+    name: "Alternativo",
+    url: "/alternativo",
+  },
+];
 const ListingComponent = ({}): JSX.Element => {
   return (
     <div>
-      lista de peliculas
+      <Header items={items} />
       <ListingMoviesWrapper>
         {movies &&
           movies.map((movie, index) => {
