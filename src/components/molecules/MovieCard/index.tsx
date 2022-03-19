@@ -7,18 +7,32 @@ import {
   // @ts-ignore
 } from "./styles.ts";
 
-const MovieCard = (): JSX.Element => {
+declare interface MovideCardProps {
+  image: string;
+  name: string;
+  genre: string;
+  tags: string[];
+}
+
+const MovieCard = ({
+  image,
+  name,
+  genre,
+  tags,
+}: MovideCardProps): JSX.Element => {
   return (
     <MovieCardContainer>
       <MovieCoverContainer>
-        <MovieCover
-          src="https://www.ecartelera.com/carteles/11100/11185/001_m.jpg"
-          alt="cartel-pelicula"
-        />
+        <img src={image} alt="cartel-pelicula" />
       </MovieCoverContainer>
-      <h1>Nombre</h1>
-      <span>Genero: </span>
-      <div>tags</div>
+      <h1>{name}</h1>
+      <span>Genero: {genre} </span>
+      <div>
+        {tags &&
+          tags.map((tag) => {
+            return <span>{tag}</span>;
+          })}
+      </div>
     </MovieCardContainer>
   );
 };
